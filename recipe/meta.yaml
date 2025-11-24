@@ -19,6 +19,7 @@ build:
 requirements:
   host:
     - pip
+    - setuptools
     - python {{ python_min }}
   run:
     - beartype >=0.10.4
@@ -32,7 +33,6 @@ requirements:
     - scikit-learn
     - scikit-learn-extra
     - scipy
-    - typing-extensions >=3.9.0
 
 test:
   imports:
