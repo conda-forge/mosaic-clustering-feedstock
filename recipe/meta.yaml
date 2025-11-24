@@ -1,20 +1,20 @@
 {% set name = "mosaic-clustering" %}
-{% set version = "0.4.1" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mosaic-clustering-{{ version }}.tar.gz
-  sha256: 2666b025257808c411bd2521c8b0f7fc50e0b90103868a46f8c49ee9f1409ec7
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 684ce3598387ed2f67da7f75e0ffe0334fccf88955b9e8c884ad6e89790997fd
 
 build:
   noarch: python
   entry_points:
     - mosaic = mosaic.__main__:main
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
